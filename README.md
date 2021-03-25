@@ -1,7 +1,7 @@
 # state-farm-distracted-driver-detectionコンペティションのレポート
 ## 概要
 
-概要としては下記の通りです。
+概要は下記の通りです。
 - URL：https://www.kaggle.com/c/state-farm-distracted-driver-detection/overview
 - 入力：ドライバーの態勢の画像
 - 出力：10の状態
@@ -53,6 +53,10 @@ state-farm-distracted-driver-detection
 
 ## ノートブックの説明
 
+### 概要
+
+各ノートブックで使用したモデルや手法は下記の通りです。
+
 ```
 state-farm-distracted-driver-detection
 └─notebook
@@ -63,8 +67,9 @@ state-farm-distracted-driver-detection
    ├─Train_004.ipynb: EfficientNetB0/ランダム交差検証/データ拡張回転・シフト・CutMix/アンサンブル
    ├─Train_005.ipynb: ResNet50/層化交差検証/データ拡張回転・シフト/アンサンブル
    └─Train_006.ipynb: ResNet50/層化交差検証/データ拡張回転・シフト/アンサンブル/半教師あり学習
-
 ```
+
+
 
 
 ## ビルド
