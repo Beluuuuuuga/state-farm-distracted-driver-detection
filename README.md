@@ -61,7 +61,20 @@ driver_imgs_list.csvでユニークなドライバーを確認すると26人で�
 ドライバーを元にした画像の分け方が重要であると判断した。
 
 また、学習とテストの画像数が大きく異なり、テストデータが学習データの3倍存在しており  
-テストデータを学習にどのように使用するか
+テストデータを学習にどのように使用するかもモデルの性能に大きく影響してくると考えられた。
+
+大きな方針は下記の通りである。
+- グループ化・層化などデータの分け方に注意する
+- 半教師あり学習でテストデータをモデルに学習させる
+- 交差検証で作成されたモデルでアンサンブル
+- 複数のモデルで学習しアンサンブル
+
+また、Discussionを確認すると、
+https://www.kaggle.com/c/state-farm-distracted-driver-detection/discussion
+
+https://www.kaggle.com/c/state-farm-distracted-driver-detection/discussion/22666
+
+
 
 ### 結果
 
