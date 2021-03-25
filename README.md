@@ -68,15 +68,55 @@ driver_imgs_list.csvでユニークなドライバーを確認すると26人で�
 - 半教師あり学習でテストデータをモデルに学習させる
 - 交差検証で作成されたモデルでアンサンブル
 - 複数のモデルで学習しアンサンブル
-
-また、Discussionを確認すると、
-https://www.kaggle.com/c/state-farm-distracted-driver-detection/discussion
-
-https://www.kaggle.com/c/state-farm-distracted-driver-detection/discussion/22666
-
-
+- 学習時はFold数は5に設定し学習
 
 ### 結果
+
+| ノートブック名 | フォールド   | モデル名       | 交差検証法                       | データ拡張           | その他                | Public | Private | 上位% | 
+| -------------- | ------------ | -------------- | -------------------------------- | -------------------- | --------------------- | ------ | ------- | ----- | 
+| Train_001      | 1            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | なし                  | 1      | 2       | 3     | 
+| Train_001      | 2            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | なし                  | 1      | 2       | 3     | 
+| Train_001      | 3            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | なし                  | 1      | 2       | 3     | 
+| Train_001      | 4            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | なし                  | 1      | 2       | 3     | 
+| Train_001      | 5            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | なし                  | 1      | 2       | 3     | 
+| Train_001      | アンサンブル | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | なし                  | 1      | 2       | 3     | 
+| Train_001      | 1            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | 推論時にデータ拡張    | 1      | 2       | 3     | 
+| Train_001      | 2            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | 推論時にデータ拡張    | 1      | 2       | 3     | 
+| Train_001      | 3            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | 推論時にデータ拡張    | 1      | 2       | 3     | 
+| Train_001      | 4            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | 推論時にデータ拡張    | 1      | 2       | 3     | 
+| Train_001      | 5            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | 推論時にデータ拡張    | 1      | 2       | 3     | 
+| Train_001      | アンサンブル | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | 推論時にデータ拡張    | 1      | 2       | 3     | 
+| Train_002      | 1            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | Train_001で半教師学習 | 1      | 2       | 3     | 
+| Train_002      | 2            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | Train_001で半教師学習 | 1      | 2       | 3     | 
+| Train_002      | 3            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | Train_001で半教師学習 | 1      | 2       | 3     | 
+| Train_002      | 4            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | Train_001で半教師学習 | 1      | 2       | 3     | 
+| Train_002      | 5            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | Train_001で半教師学習 | 1      | 2       | 3     | 
+| Train_002      | アンサンブル | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト         | Train_001で半教師学習 | 1      | 2       | 3     | 
+| Train_003      | 1            | EfficientNetB0 | ドライバーごとにグループ交差検証 | 回転・シフト         | なし                  | 1      | 2       | 3     | 
+| Train_003      | 2            | EfficientNetB0 | ドライバーごとにグループ交差検証 | 回転・シフト         | なし                  | 1      | 2       | 3     | 
+| Train_003      | 3            | EfficientNetB0 | ドライバーごとにグループ交差検証 | 回転・シフト         | なし                  | 1      | 2       | 3     | 
+| Train_003      | 4            | EfficientNetB0 | ドライバーごとにグループ交差検証 | 回転・シフト         | なし                  | 1      | 2       | 3     | 
+| Train_003      | 5            | EfficientNetB0 | ドライバーごとにグループ交差検証 | 回転・シフト         | なし                  | 1      | 2       | 3     | 
+| Train_003      | アンサンブル | EfficientNetB0 | ドライバーごとにグループ交差検証 | 回転・シフト         | なし                  | 1      | 2       | 3     | 
+| Train_004      | 1            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト・CutMix | なし                  | 1      | 2       | 3     | 
+| Train_004      | 2            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト・CutMix | なし                  | 1      | 2       | 3     | 
+| Train_004      | 3            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト・CutMix | なし                  | 1      | 2       | 3     | 
+| Train_004      | 4            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト・CutMix | なし                  | 1      | 2       | 3     | 
+| Train_004      | 5            | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト・CutMix | なし                  | 1      | 2       | 3     | 
+| Train_004      | アンサンブル | EfficientNetB0 | クラスごとに層化交差検証         | 回転・シフト・CutMix | なし                  | 1      | 2       | 3     | 
+| Train_005      | 1            | ResNet50       | ランダムに交差検証               | 回転・シフト         | imagenet次元学習あり  | 1      | 2       | 3     | 
+| Train_005      | 2            | ResNet50       | ランダムに交差検証               | 回転・シフト         | imagenet次元学習あり  | 1      | 2       | 3     | 
+| Train_005      | 3            | ResNet50       | ランダムに交差検証               | 回転・シフト         | imagenet次元学習あり  | 1      | 2       | 3     | 
+| Train_005      | 4            | ResNet50       | ランダムに交差検証               | 回転・シフト         | imagenet次元学習あり  | 1      | 2       | 3     | 
+| Train_005      | 5            | ResNet50       | ランダムに交差検証               | 回転・シフト         | imagenet次元学習あり  | 1      | 2       | 3     | 
+| Train_005      | アンサンブル | ResNet50       | ランダムに交差検証               | 回転・シフト         | imagenet次元学習あり  | 1      | 2       | 3     | 
+| Train_006      | 1            | ResNet50       | ランダムに交差検証               | 回転・シフト         | Train_005で半教師学習 | 1      | 2       | 3     | 
+| Train_006      | 2            | ResNet50       | ランダムに交差検証               | 回転・シフト         | Train_005で半教師学習 | 1      | 2       | 3     | 
+| Train_006      | 3            | ResNet50       | ランダムに交差検証               | 回転・シフト         | Train_005で半教師学習 | 1      | 2       | 3     | 
+| Train_006      | 4            | ResNet50       | ランダムに交差検証               | 回転・シフト         | Train_005で半教師学習 | 1      | 2       | 3     | 
+| Train_006      | 5            | ResNet50       | ランダムに交差検証               | 回転・シフト         | Train_005で半教師学習 | 1      | 2       | 3     | 
+| Train_006      | アンサンブル | ResNet50       | ランダムに交差検証               | 回転・シフト         | Train_005で半教師学習 | 1      | 2       | 3     | 
+
 
 ## ノートブック
 ### 概要
