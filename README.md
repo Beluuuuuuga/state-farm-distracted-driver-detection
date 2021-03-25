@@ -20,9 +20,12 @@ c9: talking to passenger
 ```
 
 - 評価関数：多クラスのlogloss
-- 画像
+- 用意されている画像
   - 学習：22,424枚
   - テスト：79,726枚
+- 用意されているCSV
+  - driver_imgs_list.csv：ドライバーと画像を紐づけているCSV 
+  - sample_submission.csv：サンプル提出のためのCSV
 
 ## リポジトリの構成
 
@@ -68,6 +71,8 @@ state-farm-distracted-driver-detection
    ├─Train_005.ipynb: ResNet50/層化交差検証/データ拡張回転・シフト/アンサンブル
    └─Train_006.ipynb: ResNet50/層化交差検証/データ拡張回転・シフト/アンサンブル/半教師あり学習
 ```
+
+
 
 
 
