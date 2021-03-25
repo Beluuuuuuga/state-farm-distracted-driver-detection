@@ -3,8 +3,8 @@
 
 概要は下記の通りです。
 - URL：https://www.kaggle.com/c/state-farm-distracted-driver-detection/overview
-- 入力：ドライバーの態勢の画像
-- 出力：10の状態
+- 入力：ドライバーの画像
+- 出力：10のドライバーの状態
 
 ```
 c0: normal driving
@@ -54,8 +54,13 @@ state-farm-distracted-driver-detection
 └─notebook: 学習や前処理のノートブック
 ```
 
-## ノートブックの説明
+## アプローチと結果
+### データ探索
 
+
+### 方針
+
+## ノートブック
 ### 概要
 
 各ノートブックで使用したモデルや手法は下記の通りです。
@@ -72,9 +77,7 @@ state-farm-distracted-driver-detection
    └─Train_006.ipynb: ResNet50/層化交差検証/データ拡張回転・シフト/アンサンブル/半教師あり学習
 ```
 
-
-
-
+### ノートブック詳細
 
 
 ## ビルド
