@@ -70,7 +70,26 @@ driver_imgs_list.csvでユニークなドライバーを確認すると26人で�
 - 複数のモデルで学習しアンサンブル
 - 学習時はFold数は5に設定し学習
 
-### 結果
+
+
+### ノートブック概要
+
+各ノートブックで使用したモデルや手法は下記の通り。
+
+```
+state-farm-distracted-driver-detection
+└─notebook
+   ├─Preprocessing.ipynb: 学習の際に使用するcsvを作成
+   ├─Train_001.ipynb: EfficientNetB0/層化交差検証/データ拡張回転・シフト/アンサンブル/推論時のデータ拡張
+   ├─Train_002.ipynb: EfficientNetB0/層化交差検証/データ拡張回転・シフト/アンサンブル/半教師あり学習
+   ├─Train_003.ipynb: EfficientNetB0/グループ交差検証/データ拡張回転・シフト/アンサンブル
+   ├─Train_004.ipynb: EfficientNetB0/ランダム交差検証/データ拡張回転・シフト・CutMix/アンサンブル
+   ├─Train_005.ipynb: ResNet50/層化交差検証/データ拡張回転・シフト/アンサンブル
+   └─Train_006.ipynb: ResNet50/層化交差検証/データ拡張回転・シフト/アンサンブル/半教師あり学習
+```
+
+### 結果一覧
+
 
 | ノートブック名 | フォールド   | モデル名       | 交差検証法                       | データ拡張           | その他                | Public | Private | 上位% | 
 | -------------- | ------------ | -------------- | -------------------------------- | -------------------- | --------------------- | ------ | ------- | ----- | 
@@ -117,23 +136,6 @@ driver_imgs_list.csvでユニークなドライバーを確認すると26人で�
 | Train_006      | 5            | ResNet50       | ランダムに交差検証               | 回転・シフト         | Train_005で半教師学習 | 1      | 2       | 3     | 
 | Train_006      | アンサンブル | ResNet50       | ランダムに交差検証               | 回転・シフト         | Train_005で半教師学習 | 1      | 2       | 3     | 
 
-
-## ノートブック
-### 概要
-
-各ノートブックで使用したモデルや手法は下記の通り。
-
-```
-state-farm-distracted-driver-detection
-└─notebook
-   ├─Preprocessing.ipynb: 学習の際に使用するcsvを作成
-   ├─Train_001.ipynb: EfficientNetB0/層化交差検証/データ拡張回転・シフト/アンサンブル/推論時のデータ拡張
-   ├─Train_002.ipynb: EfficientNetB0/層化交差検証/データ拡張回転・シフト/アンサンブル/半教師あり学習
-   ├─Train_003.ipynb: EfficientNetB0/グループ交差検証/データ拡張回転・シフト/アンサンブル
-   ├─Train_004.ipynb: EfficientNetB0/ランダム交差検証/データ拡張回転・シフト・CutMix/アンサンブル
-   ├─Train_005.ipynb: ResNet50/層化交差検証/データ拡張回転・シフト/アンサンブル
-   └─Train_006.ipynb: ResNet50/層化交差検証/データ拡張回転・シフト/アンサンブル/半教師あり学習
-```
 
 ### ノートブック詳細
 
