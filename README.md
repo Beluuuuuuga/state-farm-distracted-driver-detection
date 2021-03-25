@@ -1,7 +1,7 @@
 # state-farm-distracted-driver-detectionコンペティションのレポート
 ## 概要
 
-概要は下記の通りです。
+概要は下記の通り。
 - URL：https://www.kaggle.com/c/state-farm-distracted-driver-detection/overview
 - 入力：ドライバーの画像
 - 出力：10のドライバーの状態
@@ -55,15 +55,20 @@ state-farm-distracted-driver-detection
 ```
 
 ## アプローチと結果
-### データ探索
+### データ探索と方針
 
+driver_imgs_list.csvでユニークなドライバーを確認すると26人であり  
+ドライバーを元にした画像の分け方が重要であると判断した。
 
-### 方針
+また、学習とテストの画像数が大きく異なり、テストデータが学習データの3倍存在しており  
+テストデータを学習にどのように使用するか
+
+### 結果
 
 ## ノートブック
 ### 概要
 
-各ノートブックで使用したモデルや手法は下記の通りです。
+各ノートブックで使用したモデルや手法は下記の通り。
 
 ```
 state-farm-distracted-driver-detection
